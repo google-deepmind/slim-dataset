@@ -7,14 +7,14 @@ walled room, and for each of the 10 camera viewpoint we render a 3D view of the
 scene as seen from that viewpoint as well as a synthetically generated
 description of the scene.
 
-# Synthetic data
+## Synthetic data
 
 Each scene contains two or three coloured 3D objects and light grey walls and
 floor. The language descriptions are generated programmatically, taking into
 account the underlying scene graph and camera coordinates so as to describe the
 spatial arrangement of the objects as seen from each viewpoint.
 
-# Human annotated data
+## Human annotated data
 
 We generated further scenes and used Amazon Mechanical Turk to collect natural
 language descriptions. We asked annotators to describe the room in an image as
@@ -26,7 +26,7 @@ descriptions, to encourage diversity, while focusing the descriptions on the
 spatial relations of the objects. The annotators annotated 6,604 scenes with 10
 descriptions each, one for each view.
 
-### Usage example
+## Usage example
 
 ```python
 import tensorflow as tf
@@ -57,11 +57,22 @@ description from that viewpoint and an image of the scene viewed from above. The
 raw data is a dictionary with all the fields as read from the tf.Record as
 described in the documentation for `_parse_proto`.
 
-### Download
+## Download
 
 Raw data files referred to in this document are available to download
 [here](https://console.cloud.google.com/storage/slim-dataset).
 
-### Notes
+## Citation
+
+```
+@article{ramalho2018,
+author = {Tiago Ramalho and Tom\'a\v{s} Ko\v{c}isk\'y and Frederic Besse and S. M. Ali Eslami and G\'abor Melis and Fabio Viola and Phil Blunsom and Karl Moritz Hermann},
+title = {Encoding Spatial Relations from Natural Language},
+journal={arXiv preprint},
+year = {2018},
+}
+```
+
+## Notes
 
 This is not an official Google product.
